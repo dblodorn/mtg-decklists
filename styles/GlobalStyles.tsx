@@ -17,8 +17,8 @@ export default function GlobalStyles() {
           --border-light: 1px solid #dbdbdb;
 
           /* FONTS */
-          --font-a: Helvetica, Arial, sans-serif;
-          --font-b: Courier, monospace;
+          --font-a: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace !important;
+          --font-b: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace !important;
           
           /* SPACING */
           --base-unit: 8px;
@@ -77,7 +77,7 @@ export default function GlobalStyles() {
           display: flex;
           justify-content: space-between;
           align-items: center;
-          padding: 0 var(--space-md);
+          padding: 0 var(--space-sm);
           a {
             text-decoration: none;
             color: var(--black);

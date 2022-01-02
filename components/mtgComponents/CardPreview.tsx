@@ -13,8 +13,12 @@ export const CardPreview = () => {
   }
 
   return (
-    <div>
-      {cardData !== {} && <img src={cardData && cardData?.image_uris?.small} alt="" />}
+    <div className="flex flex-col">
+      {cardData !== {} && 
+        <div className="mx-auto">
+          <img src={cardData && cardData?.image_uris?.normal} alt={cardData?.name} />
+        </div>
+      }
     </div>
   )
 }
