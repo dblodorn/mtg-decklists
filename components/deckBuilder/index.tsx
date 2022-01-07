@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, Fragment } from "react";
 import { useCardsAutocomplete } from "../../mtgHooks";
 import { CardPreview, CardData, CardProvider } from "../mtgComponents";
 import { css } from "@emotion/react";
@@ -28,13 +28,22 @@ export const DeckBuilder = () => {
           />
         </form>
         {cardlist.data.length > 0 &&
-          <div className="mt-2">
+          <div 
+            className="mt-2 flex flex-row"
+            css={css`
+              width: 100%;
+              overflow-x: scroll;
+            `}
+          >
             {cardlist.data.map((card: string) => {
               return (
                 <button 
                   key={card}
                   onClick={handleCardSelect}
                   className="bg-gray-500 hover:bg-gray-700 text-white py-1 px-3 rounded-full mt-2 mr-2"
+                  css={css`
+                    white-space: nowrap;
+                  `}
                 >
                   {card}
                 </button>
@@ -44,10 +53,13 @@ export const DeckBuilder = () => {
         }
       </div>
       <CardProvider cardName={cardName}>
-        <>
-          <CardPreview />
-          <CardData />
-        </>
+        {cardName ?
+          <>
+            <CardPreview />
+            <CardData />
+          </>
+          : <Fragment />
+        }
       </CardProvider>
     </div>
   )

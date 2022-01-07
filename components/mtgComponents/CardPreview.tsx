@@ -25,7 +25,7 @@ export const CardPreview = () => {
         <>
           <div
             css={css`
-              width: calc(100% / 3);
+              width: calc(100% / 2);
               img {
                 width: 100%;
                 height: auto;
@@ -37,7 +37,7 @@ export const CardPreview = () => {
           <div 
             className="flex flex-col p-3"
             css={css`
-              width: calc((100% / 3) * 2);
+              width: calc(100% / 2);
             `}
           >
             <span>{cardData?.name}</span>
