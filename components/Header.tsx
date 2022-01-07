@@ -6,10 +6,10 @@ export const Header = () => {
     <>
       <header css={css`
         height: var(--header-height);
-        position: sticky;
-        top: 0;
+        position: fixed;
+        bottom: 0;
         z-index: var(--header-z);
-        border-bottom: var(--border-black);
+        border-top: var(--border-black);
         background-color: var(--white);
       `}>
         <NavLink passHref href="/">

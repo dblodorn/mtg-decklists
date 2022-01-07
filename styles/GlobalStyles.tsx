@@ -35,7 +35,7 @@ export default function GlobalStyles() {
 
           /* LAYOUT */
           --header-z: 100;
-          --header-height: calc(var(--base-unit) * 10);
+          --header-height: calc(var(--base-unit) * 6);
           --footer-height: calc(var(--base-unit) * 10);
           --content-width-md: 960px;
           --content-width-lg: ${returnBreakpoint('desktop')};
@@ -72,7 +72,7 @@ export default function GlobalStyles() {
 
         header,
         footer {
-          font-size: var(--text-02);
+          font-size: var(--text-01);
           width: 100%;
           display: flex;
           justify-content: space-between;
@@ -88,6 +88,10 @@ export default function GlobalStyles() {
               text-decoration: underline;
             `}
           }
+        }
+
+        header {
+
         }
 
         /* TYPOGRPAHY 

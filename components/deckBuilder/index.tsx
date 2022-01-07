@@ -54,10 +54,12 @@ export const DeckBuilder = () => {
       </div>
       <CardProvider cardName={cardName}>
         {cardName ?
-          <>
+          <div css={css`
+            margin-bottom: calc(var(--header-height) * 2);
+          `}>
             <CardPreview />
             <CardData />
-          </>
+          </div>
           : <Fragment />
         }
       </CardProvider>

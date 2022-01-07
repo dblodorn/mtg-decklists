@@ -7,7 +7,7 @@ export default function About() {
   return (
     <>
       <Head title={'About'} />
-      <PageWrapper>
+      <PageWrapper fw>
         <MarkDown markdown={readMe}/>
       </PageWrapper> 
     </>
