@@ -18,7 +18,7 @@ export const DeckBuilder = () => {
   
   return (
     <div className="flex flex-col">
-      <div className="flex flex-col mb-4 p-4 border-b border-solid border-black">
+      <div className="flex flex-col p-4 border-b border-solid border-black">
         <form>
           <input
             type="text"
@@ -44,10 +44,10 @@ export const DeckBuilder = () => {
         }
       </div>
       <CardProvider cardName={cardName}>
-        <div className="p-4">
+        <>
           <CardPreview />
           <CardData />
-        </div>
+        </>
       </CardProvider>
     </div>
   )
