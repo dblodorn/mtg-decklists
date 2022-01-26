@@ -1,5 +1,6 @@
 import React from 'react'
 import { useCardsAutocomplete } from "../../mtgHooks";
+import { css } from '@emotion/react';
 
 export const CardSearchBar = () => {
   const {
